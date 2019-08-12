@@ -1,0 +1,2 @@
+In Order to make the website run on your local PC. just open your comman line in the app.py directory and type "flask run"
+You need to have flash and cs50 libraries installed for running the code
