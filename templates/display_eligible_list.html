@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<ul>
+
+        {% for el in eligible %}
+
+            <li>{{ el["name"] }} with email_id {{ el["email"] }} and pointer {{ el["cgpa"] }} is eligible</li>
+
+        {% endfor %}
+
+    </ul>
+{%endblock%}
