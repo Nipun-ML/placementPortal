@@ -9,6 +9,7 @@
 	font-weight: 600;
 	color:#fff;
 	padding: 8px 25px;
+	margin-top: 0.5cm;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -88,15 +89,38 @@ h2{
                 <div class="row">
                    <div class="col-md-4 mx-auto">
                       <div class="myform form ">
-                         <form action="/display_list"  method="post" name="login">
+                         <form action="/time_slot"  method="post" name="login">
                             <div class="form-group">
-                               <input type="text" name="company_name"  class="form-control my-input"  placeholder="company_name">
+                               <input type="text" name="company_name"  class="form-control my-input"  placeholder="Company name" required>
                             </div>
                             <div class="form-group">
-                               <input type="number" name="criteria" max = 10 step=".01"  class="form-control my-input" placeholder="pointer criteria above">
-                            </div>
-                            <div class="text-center ">
-                               <button type="submit" class=" btn btn-block send-button tx-tfm">Check the Students Available</button>
+                               <input type="number" name="elg_criteria" max = 10 step=".01"  class="form-control my-input" placeholder="Criteria: Pointer above" required>
+									 </div>
+									 <div class="form-group">
+										<input type="number" name="ctc" step=".01"  class="form-control my-input" placeholder="Offered CTC in lakhs" required>
+									</div>
+									<div class="form-group">
+										<input type="number" name="contact_no" step="1"  class="form-control my-input" placeholder="Phone number of point of contact" required>
+									</div>
+									<div class="form-group">
+										<input type="email" name="contact_email"   class="form-control my-input" placeholder="Email address of point of contact" required>
+									</div>
+									 <legend class="col-form-label pt-0 ">Branches Interested:</legend>
+									 <div class="form-check form-check-inline required" >
+										<input class="form-check-input" type="checkbox" name="computer" value="Computer">
+										<label class="form-check-label" for="Computer">Computer</label>
+									 </div>
+									 <div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" name="electronics" value="Electronics">
+										<label class="form-check-label" for="Electronics">Electronics</label>
+									 </div>
+									 <div class="form-check form-check-inline">
+										<input class="form-check-input" type="checkbox" name="mechanical" value="Mechanical">
+										<label class="form-check-label" for="Mechanical">Mechanical</label>
+									 </div>
+							 </div>
+                            <div class="text-center">
+                               <button type="submit" class=" btn btn-block send-button tx-tfm">Ask for timeslots to TPO</button>
                             </div>
                            
                          </form>
